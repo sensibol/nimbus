@@ -27,12 +27,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/jverkoey/nimbus.git", :tag => s.version }
   s.requires_arc = true
-
-  s.subspec 'AttributedLabel' do |ss|
-    ss.source_files = 'src/attributedlabel/src'
-    ss.dependency 'Nimbus/Core'
-  end
-
+ 
   s.subspec 'Core' do |ss|
     ss.source_files = 'src/core/src'
   end
@@ -46,72 +41,11 @@ Pod::Spec.new do |s|
     ss.source_files = 'src/collections/src'
     ss.dependency 'Nimbus/Core'
   end
-
-  s.subspec 'CSS' do |ss|
-    ss.source_files = 'src/css/src'
-    ss.dependency 'Nimbus/Core'
-    ss.dependency 'Nimbus/Textfield'
-    ss.dependency 'AFNetworking', '~> 2.6'
-  end
-
-  s.subspec 'Interapp' do |ss|
-    ss.source_files = 'src/interapp/src'
-    ss.dependency 'Nimbus/Core'
-    ss.framework = 'CoreLocation'
-  end
-
-  s.subspec 'Launcher' do |ss|
-    ss.source_files = 'src/launcher/src'
-    ss.dependency 'Nimbus/Core'
-    ss.dependency 'Nimbus/PagingScrollView'
-  end
-
+ 
   s.subspec 'Models' do |ss|
     ss.source_files = 'src/models/src'
     ss.dependency 'Nimbus/Core'
   end
-
-  s.subspec 'NetworkControllers' do |ss|
-    ss.source_files = 'src/networkcontrollers/src'
-    ss.dependency 'Nimbus/Core'
-  end
-
-  s.subspec 'NetworkImage' do |ss|
-    ss.source_files = 'src/networkimage/src'
-    ss.dependency 'Nimbus/Core'
-    ss.dependency 'AFNetworking', '~> 2.6'
-  end
-
-  s.subspec 'Overview' do |ss|
-    ss.source_files = 'src/overview/src'
-    ss.dependency 'Nimbus/Core'
-    ss.dependency 'Nimbus/Models'
-    s.resource_bundles = {
-      'Overview' => ['src/overview/resources/NimbusOverviewer.bundle/*']
-    }
-  end
-
-  s.subspec 'PagingScrollView' do |ss|
-    ss.source_files = 'src/pagingscrollview/src'
-    ss.dependency 'Nimbus/Core'
-  end
-
-  s.subspec 'Photos' do |ss|
-    ss.source_files = 'src/photos/src'
-    ss.dependency 'Nimbus/Core'
-    ss.dependency 'Nimbus/PagingScrollView'
-  end
-
-  s.subspec 'Textfield' do |ss|
-    ss.source_files = 'src/textfield/src'
-    ss.dependency 'Nimbus/Core'
-  end
-
-  s.subspec 'WebController' do |ss|
-    ss.source_files = 'src/webcontroller/src'
-    ss.dependency 'Nimbus/Core'
-    s.resource_bundles = {
-      'WebController' => ['src/webcontroller/resources/NimbusWebController.bundle/*']
-    }
-  end
+ 
+ 
 end
